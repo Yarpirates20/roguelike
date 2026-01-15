@@ -1,20 +1,8 @@
-#include <ncurses.h>
-
+#include "Game.hpp"
 
 int main()
 {
-    initscr();
-    cbreak();
-    noecho();
-    curs_set(0);
-    keypad(stdscr, TRUE);
-
-    printw("Roguelike Init - Press any key to exit.");
-    refresh();
-
-    getch();
-
-    endwin();
-
+    Game game;
+    game.run();
     return 0;
 }

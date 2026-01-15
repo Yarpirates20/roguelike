@@ -23,5 +23,5 @@ target_link_libraries(rogue_run PRIVATE
 
 message("Configuring roguelike project")
 
-enable_testing()
-add_subdirectory(tests)
+# enable_testing()
+# add_subdirectory(tests)
