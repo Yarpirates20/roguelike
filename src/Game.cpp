@@ -1,6 +1,7 @@
 #include "Game.hpp"
 #include <ncurses.h>
 
+/** @copydoc Game::Game() */
 Game::Game()
 {
     initscr();
@@ -13,11 +14,13 @@ Game::Game()
     player_y = 10;
 }
 
+/** @copydoc Game::~Game() */
 Game::~Game()
 {
     endwin();
 }
 
+/** @copydoc void Game::run() */
 void Game::run()
 {
     while (is_running)
@@ -27,6 +30,7 @@ void Game::run()
     }
 }
 
+/** @copydoc Game::process_input() */
 void Game::process_input()
 {
     int ch = getch();
@@ -54,6 +58,7 @@ void Game::process_input()
     }
 }
 
+/** @copydoc Game::render() */
 void Game::render()
 {
     clear();
